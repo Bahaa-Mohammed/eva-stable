@@ -484,8 +484,8 @@ async def search(bot, cmd):
                     ]
                 )
             )
-    except:
-        exception as (e)
+    except Exception as (e)
+        
         
 @Client.on_message(filters.command('google'))
 async def google(bot, cmd):
