@@ -114,6 +114,10 @@ def get_reply_markup(query):
 @Client.on_message(filters.command('searchs'))
 async def searchs(bot, cmd):
     try:
+        total = await get_search_results(string,
+                                                  file_type=file_type,
+                                                  max_results=10,
+                                                  offset=offset)
         keyword = cmd.reply_to_message
         usr_cmdall1 = cmd.text
         if usr_cmdall1.startswith("/search"):
