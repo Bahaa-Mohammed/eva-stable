@@ -455,7 +455,22 @@ async def delete(bot, message):
 async def search(bot, cmd):
     usr_cmdall1 = cmd.text
     if usr_cmdall1.startswith("/search"):
-        await cmd.reply_text(
+    
+        if cmd.reply_to_message:
+            await cmd.reply_text(
+            
+                text=(f"</b>Helo, {cmd.from_user.mention} \n🕹  Press Search Button and Try Different Keywords to Search Available References📖</b>"),
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("🔎 Search", switch_inline_query_current_chat=cmd.reply_to_message.text)
+                        ]
+                    ]
+                )
+            )
+            
+        else:
+            await cmd.reply_text(
             
             text=(f"</b>Helo, {cmd.from_user.mention} \n🕹  Press Search Button and Type Your Keyword to Search Available References📖</b>"),
             reply_markup=InlineKeyboardMarkup(
