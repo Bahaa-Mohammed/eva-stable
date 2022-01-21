@@ -111,4 +111,38 @@ def get_reply_markup(query):
     return InlineKeyboardMarkup(buttons)
 
 
-
+@Client.on_message(filters.command('searchs'))
+async def searchs(bot, cmd):
+    try:
+        keyword = cmd.reply_to_message
+        usr_cmdall1 = cmd.text
+        if usr_cmdall1.startswith("/search"):
+    
+            if cmd.reply_to_message:
+                await cmd.reply_text(
+            
+                    text=(f"</b>Helo, {cmd.reply_to_message.from_user.mention} \n🕹  Press Search Button and Try Different Keywords to Search Available References📖 \nTotal Results Now:{total}</b>"),
+                    reply_to_message_id=keyword.message_id,
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat=cmd.reply_to_message.text)
+                            ]
+                        ]
+                    )
+                )
+            
+            else:
+                await cmd.reply_text(
+            
+                text=(f"</b>Helo, {cmd.from_user.mention} \n🕹  Press Search Button and Type Your Keyword to Search Available References📖</b>"),
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat='')
+                        ]
+                    ]
+                )
+            )
+    except Exception as e:
+        logger.exception(e)
