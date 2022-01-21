@@ -455,6 +455,7 @@ async def delete(bot, message):
 async def search(bot, cmd):
     try:
         keyword = cmd.reply_to_message
+        clue = cmd.text.replace('/search ', '')
         usr_cmdall1 = cmd.text
         if usr_cmdall1.startswith("/search"):
     
@@ -466,7 +467,7 @@ async def search(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat=cmd.reply_to_message.text)
+                                InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat=clue)
                             ]
                         ]
                     )
