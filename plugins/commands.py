@@ -453,36 +453,40 @@ async def delete(bot, message):
 
 @Client.on_message(filters.command('search'))
 async def search(bot, cmd):
-    usr_cmdall1 = cmd.text
-    if usr_cmdall1.startswith("/search"):
+    try:
+        keyword = cmd.reply_to_message
+        usr_cmdall1 = cmd.text
+        if usr_cmdall1.startswith("/search"):
     
-        if cmd.reply_to_message:
-            await cmd.reply_to_message.reply_text(
+            if cmd.reply_to_message:
+                await cmd.reply_text(
             
-                text=(f"</b>Helo, {cmd.reply_to-message.from_user.mention} \n🕹  Press Search Button and Try Different Keywords to Search Available References📖</b>"),
-                reply_to_message_id=cmd.reply_to_message.message_id,
+                    text=(f"</b>Helo, {cmd.reply_to-message.from_user.mention} \n🕹  Press Search Button and Try Different Keywords to Search Available References📖</b>"),
+                    reply_to_message_id=keyword.message_id,
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat=cmd.reply_to_message.text)
+                            ]
+                        ]
+                    )
+                )
+            
+            else:
+                await cmd.reply_text(
+            
+                text=(f"</b>Helo, {cmd.from_user.mention} \n🕹  Press Search Button and Type Your Keyword to Search Available References📖</b>"),
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat=cmd.reply_to_message.text)
+                            InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat='')
                         ]
                     ]
                 )
             )
-            
-        else:
-            await cmd.reply_text(
-            
-            text=(f"</b>Helo, {cmd.from_user.mention} \n🕹  Press Search Button and Type Your Keyword to Search Available References📖</b>"),
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat='')
-                    ]
-                ]
-            )
-        )
- 
+    except:
+        exception as (e)
+        
 @Client.on_message(filters.command('google'))
 async def google(bot, cmd):
     usr_cmdall1 = cmd.text
