@@ -464,7 +464,7 @@ async def search(bot, cmd):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🔎 Search", switch_inline_query_current_chat=cmd.reply_to_message.text)
+                            InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat=cmd.reply_to_message.text)
                         ]
                     ]
                 )
@@ -477,7 +477,7 @@ async def search(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔎 Search", switch_inline_query_current_chat='')
+                        InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat='')
                     ]
                 ]
             )
@@ -519,7 +519,7 @@ async def ping(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔎 Search", switch_inline_query_current_chat='')
+                        InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat='')
                     ]
                 ]
             )
