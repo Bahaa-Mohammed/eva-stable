@@ -474,7 +474,7 @@ async def google(bot, cmd):
         
         await cmd.reply_text(
             text=(f"</b>Helo, {cmd.from_user.mention} \n`I Couldn't Find Anything Related to Your Query 🙁 \nTry to Check Spelling / Details on Google👇`</b>"),    
-            
+            reply_to_message_id=cmd.reply_to_message.message_id,
             reply_markup=InlineKeyboardMarkup(
                 [ 
                     [
