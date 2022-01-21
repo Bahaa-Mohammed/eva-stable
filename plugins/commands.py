@@ -473,7 +473,8 @@ async def google(bot, cmd):
     if usr_cmdall1.startswith("/google"):
         
         await cmd.reply_text(
-            text=(f"</b>Helo, {cmd.from_user.mention} \n`I Couldn't Find Anything Related to Your Query 🙁 \nTry to Check with Google👇`</b>"),    
+            text=(f"</b>Helo, {cmd.from_user.mention} \n`I Couldn't Find Anything Related to Your Query 🙁 \nTry to Check Spelling / Details on Google👇`</b>"),    
+            
             reply_markup=InlineKeyboardMarkup(
                 [ 
                     [
