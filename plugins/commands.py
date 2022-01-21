@@ -466,7 +466,24 @@ async def search(bot, cmd):
                 ]
             )
         )
+ 
+@Client.on_message(filters.command('google'))
+async def google(bot, cmd):
+    usr_cmdall1 = cmd.text
+    if usr_cmdall1.startswith("/google"):
         
+        await cmd.reply_text(
+            text=(f"</b>Helo, {cmd.from_user.mention} \n`I Couldn't Find Anything Related to Your Query 🙁 \nTry to Check with Google👇`</b>"),    
+            reply_markup=InlineKeyboardMarkup(
+                [ 
+                    [
+                        InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖮𝗇 𝖦𝗈𝗈𝗀𝗅𝖾.', url=f'https://google.com/search?q={search.replace(" ","+")}')
+                    ]
+                ]
+            )
+        )
+
+
 @Client.on_message(filters.command('ping'))
 async def ping(bot, cmd):
     usr_cmdall1 = cmd.text
