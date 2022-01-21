@@ -480,7 +480,7 @@ async def google(bot, cmd):
                     [
                         InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖮𝗇 𝖦𝗈𝗈𝗀𝗅𝖾.', url=f'https://google.com/search?q={cmd.reply_to_message.text.replace(" ","+")}'),
                     ],[
-                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=cmd.reply_to_message.text),
+                        InlineKeyboardButton('Try Inline🔮', switch_inline_query_current_chat=cmd.reply_to_message.text),
                     ]
                 ]
             )
