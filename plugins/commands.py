@@ -457,7 +457,7 @@ async def search(bot, cmd):
     if usr_cmdall1.startswith("/search"):
     
         if cmd.reply_to_message:
-            await cmd.reply_text(
+            await cmd.reply_to_message.reply_text(
             
                 text=(f"</b>Helo, {cmd.reply_to-message.from_user.mention} \n🕹  Press Search Button and Try Different Keywords to Search Available References📖</b>"),
                 reply_to_message_id=cmd.reply_to_message.message_id,
