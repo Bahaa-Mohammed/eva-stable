@@ -459,7 +459,7 @@ async def search(bot, cmd):
         usr_cmdall1 = cmd.text
         if usr_cmdall1.startswith("/search"):
     
-            if cmd.reply_to_message and clue not == "/search":
+            if cmd.reply_to_message and not clue == "/search":
                 await cmd.reply_text(
             
                     text=(f"</b>Helo, {cmd.reply_to_message.from_user.mention} \n🕹  Press Search Button and Try Different Keywords to Search Available References📖</b>"),
