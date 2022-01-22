@@ -473,7 +473,7 @@ async def search(bot, cmd):
                         ]
                     )
                 )
-            if cmd and not clue == "/search":
+            elif not cmd.reply_to_message and not clue == "/search":
                 await cmd.reply_text(
             
                     text=(f"</b>Helo, {cmd.from_user.mention} \n\n Here is the Results for ❝ {clue} ❞ \n\n🕹 Press Search Button and Try Different Keywords to Search Available References📖</b>"),
