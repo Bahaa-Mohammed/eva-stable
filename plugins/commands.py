@@ -462,7 +462,7 @@ async def search(bot, cmd):
             if cmd.reply_to_message and not clue == "/search":
                 await cmd.reply_text(
             
-                    text=(f"</b>Helo, {cmd.reply_to_message.from_user.mention} \n\n Here is the Results for ❝ {clue} ❞ \n🕹 Press Search Button and Try Different Keywords to Search Available References📖</b>"),
+                    text=(f"</b>Helo, {cmd.reply_to_message.from_user.mention} \n\n Here is the Results for ❝ {clue} ❞ \n\n🕹 Press Search Button and Try Different Keywords to Search Available References📖</b>"),
                           
                     reply_to_message_id=keyword.message_id,
                     reply_markup=InlineKeyboardMarkup(
@@ -473,7 +473,20 @@ async def search(bot, cmd):
                         ]
                     )
                 )
+            if cmd and not clue == "/search":
+                await cmd.reply_text(
             
+                    text=(f"</b>Helo, {cmd.from_user.mention} \n\n Here is the Results for ❝ {clue} ❞ \n\n🕹 Press Search Button and Try Different Keywords to Search Available References📖</b>"),
+                          
+                    reply_to_message_id=keyword.message_id,
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat=clue)
+                            ]
+                        ]
+                    )
+                )
             else:
                 await cmd.reply_text(
             
