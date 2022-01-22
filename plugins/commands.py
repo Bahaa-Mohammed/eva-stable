@@ -467,7 +467,7 @@ async def search(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat=clue)
+                                InlineKeyboardButton("🔎 Inline Search", switch_inline_query_current_chat=clue if clue else keyword)
                             ]
                         ]
                     )
