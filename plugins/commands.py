@@ -478,7 +478,7 @@ async def search(bot, cmd):
             
                     text=(f"</b>Helo, {cmd.from_user.mention} \n\n Here is the Results for ❝ {clue} ❞ \n\n🕹 Press Search Button and Try Different Keywords to Search Available References📖</b>"),
                           
-                    reply_to_message_id=keyword.message_id,
+                    reply_to_message_id=cmd.message_id,
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
