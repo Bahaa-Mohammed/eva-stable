@@ -462,7 +462,8 @@ async def search(bot, cmd):
             if cmd.reply_to_message and not clue == "/search":
                 await cmd.reply_text(
             
-                    text=(f"</b>Helo, {cmd.reply_to_message.from_user.mention} \n🕹  Press Search Button and Try Different Keywords to Search Available References📖</b>"),
+                    text=(f"</b>Helo, {cmd.reply_to_message.from_user.mention} \n\n Here is the Results for ❝ clue ❞    \n🕹  Press Search Button and Try Different Keywords to Search Available References📖</b>"),
+                          
                     reply_to_message_id=keyword.message_id,
                     reply_markup=InlineKeyboardMarkup(
                         [
