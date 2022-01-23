@@ -36,6 +36,7 @@ async def stick(bot, message):
             else:
                 return   
             if message.reply_to_message:
+                sticky=message.text.replace("/stick", " ")
                 await bot.send_sticker(chat_id=message.from_user.id, sticker=sticky, reply_to_message_id=message.reply_to_message.message_id)
             else:
                 return
