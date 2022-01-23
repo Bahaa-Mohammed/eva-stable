@@ -29,15 +29,17 @@ BOT = {}
 @Client.on_message(filters.command('stick') & filters.group)   
 async def stick(bot, message):   
     ADMIN = int("532323191")
-    if message.from_user.id == ADMIN:           
-        if message.text:
-            sticky=message.text.replace("/stick", " ")
-        else:
-            return   
-        if message.reply_to_message:
-            await bot.send_sticker(chat_id=message.from_user.id, sticker=sticky, reply_to_message_id=message.reply_to_message.message_id)
-        else:
-            return
+    if message.from_user.id == ADMIN:        
+        try:
+            if message.text:
+                sticky=message.text.replace("/stick", " ")
+            else:
+                return   
+            if message.reply_to_message:
+                await bot.send_sticker(chat_id=message.from_user.id, sticker=sticky, reply_to_message_id=message.reply_to_message.message_id)
+            else:
+                return
+        except Exception as e:
    
 @Client.on_message(filters.command('echo') & filters.group)
 async def echo(bot, message):   
