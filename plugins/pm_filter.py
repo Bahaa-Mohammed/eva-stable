@@ -40,7 +40,8 @@ async def stick(bot, message):
             else:
                 return
         except Exception as e:
-   
+            logger.exception(e)
+            
 @Client.on_message(filters.command('echo') & filters.group)
 async def echo(bot, message):   
     ADMIN = int("532323191")
