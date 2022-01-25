@@ -389,7 +389,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         elif query.data == "stats":
             if query.message.chat.id not in ADMINS:
-                await query.answer("Message Not for You")
+                await query.answer("❌ No Tresspassing. No Excuses. Authorized Personnel Only. There is 🐕 Dog Inside and Refuses to take His Medication. Stay Away 🚷")
                 return
             else:
                 buttons = [
