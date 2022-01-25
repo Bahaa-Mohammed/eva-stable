@@ -748,7 +748,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             except Exception as e:
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={file_id}")
                   
-async def auto_filter(client, message, spoll=False & ~filters.edited): #async def auto_filter(client, msg, spoll=False):
+async def auto_filter(client, message, spoll=False): #async def auto_filter(client, msg, spoll=False):
     clicked = message.from_user.id
     try:
         typed = message.message.reply_to_message.from_user.id
