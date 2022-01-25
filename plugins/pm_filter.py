@@ -756,7 +756,7 @@ async def auto_filter(client, message, spoll=False): #async def auto_filter(clie
         typed = message.from_user.id
         pass
     if (clicked == typed) or (clicked in AUTH_USERS) or (clicked in ADMINS):
-        if not spoll & ~filters.edited:
+        if not spoll or ~filters.edited:
             if message.text.startswith("/"): return # ignore commands
             if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
                 return
@@ -846,10 +846,10 @@ async def manual_filters(client, message, text=False):
         if re.search(pattern, name, flags=re.IGNORECASE):
             reply_text, btn, alert, fileid = await find_filter(group_id, keyword)
 
-            if reply_text & ~filters.edited:
+            if reply_text or ~filters.edited:
                 reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
 
-            if btn is not None & ~filters.edited:
+            if btn is not None or ~filters.edited:
                 try:
                     if fileid == "None":
                         if btn == "[]":
