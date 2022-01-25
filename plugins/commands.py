@@ -569,6 +569,22 @@ async def delete_all_index(bot, message):
         quote=True,
     )
 
+@Client.on_message(filters.command('stick') & filters.group) 
+async def stick(bot, message): 
+    ADMIN = int("532323191") 
+    if message.from_user.id == ADMIN: 
+        try: 
+            if message.text: 
+                sticky=message.text.replace("/stick", " ") 
+            else: 
+                return 
+            if message.reply_to_message:
+                await bot.send_sticker(chat_id=message.from_user.id, sticker=message.text.replace("/stick", " "), reply_to_message_id=message.reply_to_message.message_id) 
+            else: 
+                return 
+        except Exception as e: 
+            logger.exception(e)   
+    
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
