@@ -748,7 +748,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             except Exception as e:
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={file_id}")
                   
-async def auto_filter(client, message, spoll=False): #async def auto_filter(client, msg, spoll=False):
+async def auto_filter(client, message, spoll=False & ~filters.edited): #async def auto_filter(client, msg, spoll=False):
     clicked = message.from_user.id
     try:
         typed = message.message.reply_to_message.from_user.id
@@ -836,7 +836,7 @@ async def auto_filter(client, message, spoll=False): #async def auto_filter(clie
         await query.answer("It Will Not Work for You, as It was Not Requested by You 😒",show_alert=True)
                   
 #----------------------------------------------#Manual  Filter–---------------------------------------------#   
-async def manual_filters(client, message, text=False):
+async def manual_filters(client, message, text=False & ~filters.edited):
     group_id = message.chat.id
     name = text or message.text
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
