@@ -10,7 +10,7 @@ from pyrogram import Client, filters
 from database.users_chats_db import db
 from pyrogram.errors import UserNotParticipant
 from info import API_KEY, P_TTI_SHOW_OFF, IMDB, IMDB_TEMPLATE
-from database.ia_filterdb import Media, get_file_details
+#from database.ia_filterdb import Media, get_file_details
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
 from utils import get_filter_results, get_file_details, is_subscribed, get_poster ,temp, get_size
