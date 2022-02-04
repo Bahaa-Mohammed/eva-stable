@@ -236,7 +236,16 @@ async def get_filter_results(query):
         regex = re.compile(raw_pattern, flags=re.IGNORECASE)
     except:
         return []
-    filter = {'file_name': regex}
+    
+    if USE_CAPTION_FILTER:
+        filter = {'$or': [{'file_name': regex}, {'caption': regex}]}
+    else:
+        filter = {'file_name': regex}
+
+    if file_type:
+        filter['file_type'] = file_type
+
+    #filter = {'file_name': regex}
     total_results = await Media.count_documents(filter)
     cursor = Media.find(filter)
     cursor.sort('$natural', -1)
