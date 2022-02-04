@@ -173,7 +173,7 @@ async def filter(client, message):
             [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total_results']}",callback_data="pages")]
+            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
         )
         if BUTTON:
             buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
@@ -221,7 +221,8 @@ async def group(client, message):
             botusername=await client.get_me()
             nyva=botusername.username
             BOT["username"]=nyva
-        files = await get_filter_results(query=search)
+        files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)  
+        #files = await get_filter_results(query=search)
         if files:
             for file in files:
                 file_id = file.file_id
@@ -264,7 +265,7 @@ async def group(client, message):
             [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total_results']}",callback_data="pages")]
+            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
         )
         if BUTTON:
             buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
