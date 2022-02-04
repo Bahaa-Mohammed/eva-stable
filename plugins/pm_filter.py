@@ -127,7 +127,7 @@ async def filter(client, message):
     if 2 < len(message.text) < 100:    
         btn = []
         search = message.text
-        files = await get_filter_results(query=search)
+        files = await get_search_results(query=search)
         if files:
             for file in files:
                 file_id = file.file_id
@@ -221,7 +221,7 @@ async def group(client, message):
             botusername=await client.get_me()
             nyva=botusername.username
             BOT["username"]=nyva
-        files = await get_filter_results(query=search)
+        files = await get_search_results(query=search)
         if files:
             for file in files:
                 file_id = file.file_id
@@ -774,7 +774,7 @@ async def auto_filter(client, msg, spoll=False): #async def auto_filter(client, 
                     botusername=await client.get_me()
                     nyva=botusername.username
                     BOT["username"]=nyva
-                files = await get_filter_results(query=search)
+                files = await get_search_results(query=search)
                 if files:
                     for file in files:
                         file_id = file.file_id
