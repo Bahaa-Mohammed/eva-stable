@@ -10,7 +10,7 @@ from pyrogram import Client, filters
 from database.users_chats_db import db
 from pyrogram.errors import UserNotParticipant
 from info import API_KEY, P_TTI_SHOW_OFF, IMDB, IMDB_TEMPLATE
-from database.ia_filterdb import Media, get_file_details, get_search_results
+from database.ia_filterdb import Media, get_file_details
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
 from utils import get_filter_results, get_file_details, is_subscribed, get_poster ,temp, get_size
@@ -200,9 +200,9 @@ async def advantage_spoll_choker(bot, query):
    
     k = await manual_filters(bot, query.message, text=movie)
     if k==False:
-        files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
+        files = await get_filter_results(movie=search)
         if files:
-            k = (movie, files, offset, total_results)
+            k = (movie)
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit('This Movie Not Found In DataBase')
