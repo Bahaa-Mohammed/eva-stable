@@ -752,7 +752,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             except Exception as e:
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={file_id}")
                   
-async def auto_filter(client, message, spoll=False): #async def auto_filter(client, msg, spoll=False):
+async def auto_filter(client, msg, spoll=False): #async def auto_filter(client, msg, spoll=False):
     clicked = message.from_user.id
     try:
         typed = message.message.reply_to_message.from_user.id
@@ -761,6 +761,7 @@ async def auto_filter(client, message, spoll=False): #async def auto_filter(clie
         pass
     if (clicked == typed) or (clicked in AUTH_USERS) or (clicked in ADMINS):
         if not spoll:
+            message = msg
             if message.text.startswith("/"): return # ignore commands
             if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
                 return
