@@ -6,7 +6,7 @@ from pyrogram import Client, __version__
 from database.users_chats_db import db
 from database.ia_filterdb import Media
 from database.users_chats_db import db
-from info import SESSION, API_ID, API_HASH, BOT_TOKEN
+from info import SESSION, API_ID, API_HASH, BOT_TOKEN, ADMINS
 
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
@@ -40,7 +40,7 @@ class Bot(Client):
         self.username = '@' + me.username
                   
         print(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
-        test = await self.send_message(chat_id = , text = "Bot Restarted!")
+        test = await self.send_message(chat_id = ADMINS, text = "Bot Restarted!")
             #await test.delete()
     async def stop(self, *args):
         await super().stop()
