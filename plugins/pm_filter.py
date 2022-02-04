@@ -753,6 +753,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={file_id}")
                   
 async def auto_filter(client, msg, spoll=False): #async def auto_filter(client, msg, spoll=False):
+    message = msg
     clicked = message.from_user.id
     try:
         typed = message.message.reply_to_message.from_user.id
@@ -761,7 +762,7 @@ async def auto_filter(client, msg, spoll=False): #async def auto_filter(client, 
         pass
     if (clicked == typed) or (clicked in AUTH_USERS) or (clicked in ADMINS):
         if not spoll:
-            message = msg
+            
             if message.text.startswith("/"): return # ignore commands
             if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
                 return
@@ -773,7 +774,8 @@ async def auto_filter(client, msg, spoll=False): #async def auto_filter(client, 
                     botusername=await client.get_me()
                     nyva=botusername.username
                     BOT["username"]=nyva
-                files = await get_filter_results(query=search)
+                files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)  
+                #files = await get_filter_results(query=search)
                 if files:
                     for file in files:
                         file_id = file.file_id
