@@ -40,7 +40,7 @@ class Bot(Client):
         self.username = '@' + me.username
                   
         print(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
-        test = await self.send_message(chat_id = ADMINS, text = "Bot Restarted!")
+        test = await self.send_message(chat_id = ADMINS.id, text = "Bot Restarted!")
             #await test.delete()
     async def stop(self, *args):
         await super().stop()
