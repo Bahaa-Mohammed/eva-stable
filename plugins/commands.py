@@ -32,17 +32,17 @@ async def start(bot, cmd):
                         [
                             InlineKeyboardButton("🔎 Search", switch_inline_query_current_chat='')
                         ],[
-                            InlineKeyboardButton("🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎", url="https://t.me/dental_case_study")
+                            InlineKeyboardButton("Industrial lectures", url="https://t.me/College_Of_Technical_Engineering")
                         ],[
                             InlineKeyboardButton("🚀 Control Panel 🏰", callback_data="about")
                         
                         ],[
-                            InlineKeyboardButton("➕Join 🦷Discussion Group➕", url="https://t.me/dent_tech_for_u")
+                            InlineKeyboardButton("➕Join Group➕", url="https://t.me/automationEngineering1")
                         ],[
-                            InlineKeyboardButton("📺 𝔻𝕖𝕞𝕠 🧭", url="https://t.me/grand_dental_library/378?comment=75870"),
-                            InlineKeyboardButton("🤔 𝔽𝔸ℚ𝕤 💡", url="https://t.me/dental_backup/241")
+                            InlineKeyboardButton("📺 Demo 🧭", url="https://t.me/College_Of_Technical_Engineering"),
+                            InlineKeyboardButton("🤔 FAQ 💡", url="https://t.me/automationEngineering1")
                         ],[       
-                            InlineKeyboardButton("🎁 Donate & Support 🎁", url="https://t.me/dental_backup/180")
+                            InlineKeyboardButton("🎁 Donate & Support 🎁", url="https://t.me/automationEngineering1")
                         ]
                     ]
                 )
@@ -63,16 +63,16 @@ async def start(bot, cmd):
             [                 
                 InlineKeyboardButton("🔎 Search", switch_inline_query_current_chat='')
             ],[
-                InlineKeyboardButton("🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎", url="https://t.me/dental_case_study")
+                InlineKeyboardButton("Industrial lectures🔎", url="https://t.me/College_Of_Technical_Engineering")
             ],[
                 InlineKeyboardButton("🚀 Control Panel 🏰", callback_data="about")
             ],[
-                InlineKeyboardButton("➕Join 🦷Discussion Group➕", url="https://t.me/dent_tech_for_u")
+                InlineKeyboardButton("➕Join Group➕", url="https://t.me/automationEngineering1")
             ],[                                           
-                InlineKeyboardButton("📺 𝔻𝕖𝕞𝕠 🧭", url="https://t.me/grand_dental_library/378?comment=75870"),
-                InlineKeyboardButton("🤔 𝔽𝔸ℚ𝕤 💡", url="https://t.me/dental_backup/241")
+                InlineKeyboardButton("📺 demo 🧭", url="https://t.me/College_Of_Technical_Engineering"),
+                InlineKeyboardButton("🤔 faq 💡", url="https://t.me/College_Of_Technical_Engineering")
             ],[
-                InlineKeyboardButton("🎁 Donate & Support 🎁", url="https://t.me/dental_backup/180")
+                InlineKeyboardButton("🎁 Donate & Support 🎁", url="https://t.me/College_Of_Technical_Engineering")
             ]
         ]                                                                                                                                  
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -92,7 +92,7 @@ async def start(bot, cmd):
         btn = [
             [
                 InlineKeyboardButton(
-                    "𝗝𝗼𝗶𝗻 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎", url=invite_link.invite_link
+                    "Join🔎", url=invite_link.invite_link
                 )
             ]
         ]
@@ -100,7 +100,7 @@ async def start(bot, cmd):
             btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{cmd.command[1]}")])
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🤭** \n \n Are You Looking for References ?! \n Then First Join Our 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎 Channel...😁 Then Try Again... Press /start 😁 and You will Get Your Requests Here...! \n \n 🪐Powered by: \n 🔬 @dent_tech_for_u 📚",
+            text="**🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🤭** \n \n Are You Looking for References ?! \n Then First Join Our Industrial automation lectures🔎 Channel...😁 Then Try Again... Press /start 😁 and You will Get Your Requests Here...! \n \n 🪐Powered by: \n 🔬 Industrial automation lectures 📚",
     
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
@@ -111,16 +111,16 @@ async def start(bot, cmd):
             [                 
                 InlineKeyboardButton("🔎 Search", switch_inline_query_current_chat='')
             ],[
-                InlineKeyboardButton("🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎", url="https://t.me/dental_case_study")
+                InlineKeyboardButton("Industrial automation lectures🔎", url="https://t.me/College_Of_Technical_Engineering")
             ],[
                 InlineKeyboardButton("🚀 Control Panel 🏰", callback_data="about")
             ],[
-                InlineKeyboardButton("➕Join 🦷Discussion Group➕", url="https://t.me/dent_tech_for_u")
+                InlineKeyboardButton("➕Join Group➕", url="https://t.me/automationEngineering1")
             ],[                                           
-                InlineKeyboardButton("📺 𝔻𝕖𝕞𝕠 🧭", url="https://t.me/grand_dental_library/378?comment=75870"),
-                InlineKeyboardButton("🤔 𝔽𝔸ℚ𝕤 💡", url="https://t.me/dental_backup/241")
+                InlineKeyboardButton("📺 Demo 🧭", url="https://t.me/College_Of_Technical_Engineering"),
+                InlineKeyboardButton("🤔 FAQ 💡", url="https://t.me/College_Of_Technical_Engineering")
             ],[
-                InlineKeyboardButton("🎁 Donate & Support 🎁", url="https://t.me/dental_backup/180")
+                InlineKeyboardButton("🎁 Donate & Support 🎁", url="https://t.me/College_Of_Technical_Engineering")
             ]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -163,9 +163,9 @@ async def start(bot, cmd):
                     [
                         InlineKeyboardButton('🔎 Search', switch_inline_query_current_chat='')
                     ],[
-                        InlineKeyboardButton('📚🅳🆃 📖 🆁🅾🅾🅼📚', url='https://t.me/dent_tech_for_books')
+                        InlineKeyboardButton('Industrial lectures📚', url='https://t.me/College_Of_Technical_Engineering')
                     ],[
-                        InlineKeyboardButton('𝗝𝗼𝗶𝗻 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎', url='https://t.me/dental_case_study')
+                        InlineKeyboardButton('𝗝𝗼𝗶𝗻 🔎', url='https://t.me/automationEngineering1')
                     ]
                 ]
             try:
