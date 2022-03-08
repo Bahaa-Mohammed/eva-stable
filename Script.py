@@ -1,8 +1,11 @@
 class script(object):
-    START_MSG = """Hello {},
-I'm <a href=https://t.me/Bahaa_Mohammed_Bot> 📚 Bahaa_Mohammed_Bot🔎</a>, join our chat <a href='https://t.me/automationEngineering1'> 📚 Automatic library </a> and enjoy 😍
+    START_MSG = """𝗛𝗲𝗹𝗼 {},
+𝗜𝗮𝗺 <a href=https://t.me/search_dentalbooks_bot> 📚 𝗗𝗲𝗻𝘁 𝗧𝗲𝗰𝗵 🔎 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗮𝗻 🧚‍♀</a>, 𝗜 𝗰𝗮𝗻 𝗣𝗿𝗼𝘃𝗶𝗱𝗲 𝗬𝗼𝘂 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗗𝗲𝗻𝘁𝗮𝗹 𝗥𝗲𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 𝗙𝗿𝗲𝗲. 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 <a href='https://t.me/dent_tech_for_books'> 📚 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 🔎 𝗚𝗿𝗼𝘂𝗽 🧚‍♀ </a> 𝗮𝗻𝗱 𝗘𝗻𝗷𝗼𝘆 😍
+<b>😉 ʜᴇʀᴇ ʏᴏᴜ ᴄᴀɴ sᴇᴀʀᴄʜ ғɪʟᴇs ɪɴ ⤵️ɪɴʟɪɴᴇ ᴍᴏᴅᴇ ᴀs ᴡᴇʟʟ ᴀs 📱ᴘᴍ, ᴜsᴇ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs ᴛᴏ sᴇᴀʀᴄʜ ғɪʟᴇs ᴏʀ sᴇɴᴅ ᴍᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏғ ғɪʟᴇ ᴛᴏ sᴇᴀʀᴄʜ. 🎉</b>
+<b>🥲𝑀𝑦 𝑀𝑎𝑠𝑡𝑒𝑟𝑠 𝑎𝑟𝑒 𝑆𝑡𝑖𝑙𝑙 𝑊𝑜𝑟𝑘𝑖𝑛𝑔 𝑜𝑛 𝑀𝑒⚙. 𝑆𝑢𝑝𝑝𝑜𝑟𝑡 𝒕𝒐 𝐾𝑒𝑒𝑝 𝑀𝑒 𝐴𝑙𝑖𝑣𝑒</b> 🙏"""
+      
     ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href='https://t.me/Bahaa_Mohammed_Bot'>Bahaa Mohammed</a>
+✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href='https://t.me/dent_tech_for_books'> 📚🅳🆃 📖 🆁🅾🅾🅼📚♀</a>
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
 ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 ✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
