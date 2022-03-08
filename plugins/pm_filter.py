@@ -100,11 +100,11 @@ async def filter(client, message):
         except UserNotParticipant:  
             await client.send_message(
                 chat_id=message.from_user.id,
-                text="**🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🤭** \n \n Are You Looking for References ?! \n Then First Join Our 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎 Channel...😁 Then Try Again... Press /start 😁 and You will Get Your Requests Here...! \n \n 🪐Powered by: \n 🔬 @dent_tech_for_u 📚",
+                text="join our main channel 🤭 \n\n Are You Looking for References?!\nThen First Join Our Automatic🔎 Channel...😁 Then Try Again... Press /start 😁 and You will Get Your Requests Here...!\n\n 🪐Powered by: \n 🔬 Bahaa Mohammed 📚",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("𝗝𝗼𝗶𝗻 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎", url=invite_link.invite_link)
+                            InlineKeyboardButton("join 🦷Industrial automation lectures🔎", url=invite_link.invite_link)
                         ],[
                             InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{file_id}")
                         ]                     
@@ -375,9 +375,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('𝗝𝗼𝗶𝗻 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎', url='https://t.me/dental_case_study')
+                    InlineKeyboardButton('Industrial automation lectures🔎', url='https://t.me/College_Of_Technical_Engineering')
                 ],[
-                    InlineKeyboardButton('➕ Join 🦷 Discussion Group ➕', url='https://t.me/dent_tech_for_u')
+                    InlineKeyboardButton('➕ Join Industrial automation lectures Group ➕', url='https://t.me/automationEngineering1')
                 ],[
                     InlineKeyboardButton('🔮 Status', callback_data='stats')    
                 ],[              
@@ -385,7 +385,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('🔐 Close', callback_data='close_data')
                 ]
             ]
-            await query.message.edit(text="<b>Developer : <a href='https://t.me/dent_tech_for_books'>📚🅳🆃 📖 🆁🅾🅾🅼📚</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://t.me/dent_tech_library'>🔬𝔻𝕖𝕟𝕥 𝕋𝕖𝕔𝕙 𝕃𝕚𝕓𝕣𝕒𝕣𝕪📚</a>\nDiscussion Group: <a href='https://t.me/dent_tech_for_u'>Click Here</a>\n𝗝𝗼𝗶𝗻 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎: <a href='https://t.me/dental_case_study'>Click Here</a></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text="<b>Developer : <a href='https://t.me/College_Of_Technical_Engineering'>Industrial automation lectures📚</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://t.me/College_Of_Technical_Engineering'>🔬Industrial automation lectures📚</a>\nDiscussion Group: <a href='https://t.me/automationEngineering1'>Click Here</a>\njoin Industrial automation lectures🔎: <a href='https://t.me/automationEngineering1'>Click Here</a></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
         elif query.data == "stats":
             if query.message.chat.id not in ADMINS:
@@ -438,14 +438,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             buttons = [[
                 InlineKeyboardButton("🔎 Search", switch_inline_query_current_chat='')
                 ],[
-                InlineKeyboardButton("🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎", url="https://t.me/dental_case_study")
+                InlineKeyboardButton("Industrial automation lectures🔎", url="https://t.me/College_Of_Technical_Engineering")
                 ],[
                 InlineKeyboardButton("🚀 Control Panel 🏰", callback_data="about")
                 ],[
-                InlineKeyboardButton("➕Join 🦷Discussion Group➕", url="https://t.me/dent_tech_for_u")
+                InlineKeyboardButton("➕Join Industrial automation lectures Group➕", url="https://t.me/automationEngineering1")
                 ],[
-                InlineKeyboardButton("📺 𝔻𝕖𝕞𝕠 🧭", url="https://t.me/grand_dental_library/378?comment=75870"),
-                InlineKeyboardButton("🤔 𝔽𝔸ℚ𝕤 💡", url="https://t.me/dental_backup/241")         
+                InlineKeyboardButton("📺 OK 🧭", url="https://t.me/grand_dental_library/378?comment=75870"),
+                InlineKeyboardButton("🤔 FAQ 💡", url="https://t.me/dental_backup/241")         
                 ],[            
                 InlineKeyboardButton("🎁 Donate & Support 🎁", url="https://t.me/dental_backup/180")
             ]]   
@@ -474,9 +474,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [
                         InlineKeyboardButton('🔎 Search', switch_inline_query_current_chat='')        
                     ],[
-                        InlineKeyboardButton('📚🅳🆃 📖 🆁🅾🅾🅼📚', url='https://t.me/dent_tech_for_books')
+                        InlineKeyboardButton('Channel📚', url='https://t.me/College_Of_Technical_Engineering')
                     ],[
-                        InlineKeyboardButton('𝗝𝗼𝗶𝗻 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎', url='https://t.me/dental_case_study')
+                        InlineKeyboardButton('Industrial automation lectures🔎', url='https://t.me/College_Of_Technical_Engineering')
                     ]
                 ]
             await query.answer()
