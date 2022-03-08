@@ -30,7 +30,7 @@ BOT = {}
             
 @Client.on_message(filters.command('echo') & filters.group)
 async def echo(bot, message):   
-    ADMIN = int("532323191")
+    ADMIN = int("5177196243")
     if message.from_user.id == ADMIN:           
         if message.text:
             txt=message.text.replace("/echo", " ")
@@ -57,7 +57,7 @@ async def echo(bot, message):
 
 @Client.on_message(filters.command('gsend') & filters.private)
 async def gsend(client, message):
-    ADMIN = int("532323191")
+    ADMIN = int("5177196243")
     if message.from_user.id == ADMIN: 
                if message.reply_to_message:
                                     chatid=int(message.text.replace("/gsend"," "))
