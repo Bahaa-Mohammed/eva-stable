@@ -160,10 +160,10 @@ async def filter(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ @dental_case_study \n🔐 𝗝𝗢𝗜𝗡 ⤴️ 𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 🚀", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎Industrial automation lectures \n🔐 join to unlock 🚀", reply_markup=InlineKeyboardMarkup(buttons))
 
             else:
-                await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ @dental_case_study \n🔐 𝗝𝗢𝗜𝗡 ⤴️ 𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 🚀", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎✨ Industrial automation lectures \n🔐 join to unlock 🚀", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -181,9 +181,9 @@ async def filter(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-           await message.reply_photo(photo=poster, caption=f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ @dental_case_study \n🔐 𝗝𝗢𝗜𝗡 ⤴️ 𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 🚀", reply_markup=InlineKeyboardMarkup(buttons))
+           await message.reply_photo(photo=poster, caption=f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ Industrial automation lectures \n🔐 join to unlock 🚀", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-           await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ @dental_case_study \n🔐 𝗝𝗢𝗜𝗡 ⤴️ 𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 🚀", reply_markup=InlineKeyboardMarkup(buttons))
+           await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ Industrial automation lectures \n🔐 join to unlock 🚀", reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_callback_query(filters.regex(r"^spolling"))
 async def advantage_spoll_choker(bot, query):
@@ -252,9 +252,9 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ @dental_case_study \n🔐 𝗝𝗢𝗜𝗡 ⤴️ 𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 🚀", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎 Industrial automation lectures \n🔐 join to unlock 🚀", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ @dental_case_study \n🔐 𝗝𝗢𝗜𝗡 ⤴️ 𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 🚀", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ Industrial automation lectures \n🔐 join to unlock 🚀", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -270,7 +270,7 @@ async def group(client, message):
             buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
         
         else:
-            await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ @dental_case_study \n🔐 𝗝𝗢𝗜𝗡 ⤴️ 𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 🚀", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎Industrial automation lectures \n🔐 join to unlock 🚀", reply_markup=InlineKeyboardMarkup(buttons))
     
 def get_size(size):
     """Get size in readable format"""
@@ -444,10 +444,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],[
                 InlineKeyboardButton("➕Join Industrial automation lectures Group➕", url="https://t.me/automationEngineering1")
                 ],[
-                InlineKeyboardButton("📺 OK 🧭", url="https://t.me/grand_dental_library/378?comment=75870"),
+                InlineKeyboardButton("📺 OK 🧭", url="https://t.me/College_Of_Technical_Engineering"),
                 InlineKeyboardButton("🤔 FAQ 💡", url="https://t.me/dental_backup/241")         
                 ],[            
-                InlineKeyboardButton("🎁 Donate & Support 🎁", url="https://t.me/dental_backup/180")
+                InlineKeyboardButton("🎁 Donate & Support 🎁", url="https://t.me/College_Of_Technical_Engineering")
             ]]   
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_text(
@@ -511,9 +511,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [
                         InlineKeyboardButton('🔎 Search', switch_inline_query_current_chat='')
                     ],[
-                        InlineKeyboardButton('📚🅳🆃 📖 🆁🅾🅾🅼📚', url='https://t.me/dent_tech_for_books')
+                        InlineKeyboardButton('📚Industrial automation lectures📚', url='https://t.me/College_Of_Technical_Engineering')
                     ],[
-                        InlineKeyboardButton('𝗝𝗼𝗶𝗻 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎', url='https://t.me/dental_case_study')
+                        InlineKeyboardButton('Industrial automation lectures🔎', url='https://t.me/College_Of_Technical_Engineering')
                     ]
                 ]                
                 await query.answer()
@@ -719,9 +719,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [
                         InlineKeyboardButton('🔎 Search', switch_inline_query_current_chat='')        
                     ],[
-                        InlineKeyboardButton('📚🅳🆃 📖 🆁🅾🅾🅼📚', url='https://t.me/dent_tech_for_books')
+                        InlineKeyboardButton('📚Industrial automation lectures📚', url='https://t.me/College_Of_Technical_Engineering')
                     ],[                      
-                        InlineKeyboardButton('𝗝𝗼𝗶𝗻 🦷𝔻𝕖𝕟𝕥𝕒𝕝 ℂ𝕒𝕤𝕖 𝕊𝕥𝕦𝕕𝕪🔎', url='https://t.me/dental_case_study')
+                        InlineKeyboardButton('Industrial automation lectures🔎', url='https://t.me/College_Of_Technical_Engineering')
                     ]
                 ]                
                 await query.answer()
@@ -824,9 +824,9 @@ async def auto_filter(client, msg, spoll=False): #async def auto_filter(client, 
                 if API_KEY:
                     poster=await get_poster(search)
                 if poster:
-                    await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ @dental_case_study \n🔐 𝗝𝗢𝗜𝗡 ⤴️ 𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 🚀", reply_markup=InlineKeyboardMarkup(buttons))
+                    await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎Industrial automation lectures \n🔐 join to unlock 🚀", reply_markup=InlineKeyboardMarkup(buttons))
                 else:
-                    await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎🦷✨ @dental_case_study \n🔐 𝗝𝗢𝗜𝗡 ⤴️ 𝘁𝗼 𝗨𝗻𝗹𝗼𝗰𝗸 🚀", reply_markup=InlineKeyboardMarkup(buttons))
+                    await message.reply_text(f"<b>{message.from_user.mention}, ☕️ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗪𝗵𝗮𝘁 𝗜 𝗙𝗼𝘂𝗻𝗱 𝗳𝗼𝗿 𝗬𝗼𝘂𝗿 𝗤𝘂𝗲𝗿𝘆 ❝{search}❞ ‌‌‌‌‎ ­  ­  ­  ­  ­  </b> \n\n🅒 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 🅒  \n🔎Industrial automation lectures \n🔐 join to unlock 🚀", reply_markup=InlineKeyboardMarkup(buttons))
 
                 imdb = await get_poster(search, file=(files[0]).file_name) if IMDB else None
                 if imdb:
